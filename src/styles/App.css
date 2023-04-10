@@ -1,5 +1,22 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  margin-right: 3rem;
+}
+
+.nav-links li {
+  list-style-type: none;
+}
+
+ul li a {
+  text-decoration: none;
 }
