@@ -1,0 +1,10 @@
+.Rocket-Card {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+img {
+    height: 500px;
+    width: 800px;
+}
