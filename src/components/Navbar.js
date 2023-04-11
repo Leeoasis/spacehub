@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 const links = [
   { path: '/', text: 'Rockets' },
-  { path: 'missions', text: 'Missions' },
-  { path: 'profile', text: 'My Profile' },
+  { path: '/missions', text: 'Missions' },
+  { path: '/profile', text: 'My Profile' },
 ];
 
 export default function Navbar() {
@@ -14,7 +14,13 @@ export default function Navbar() {
       <ul className="nav-links">
         {links.map((link) => (
           <li key={link.text}>
-            <NavLink to={link.path}>{link.text}</NavLink>
+            <NavLink
+              exact
+              to={link.path}
+              activeClassName="nav-link-active"
+            >
+              {link.text}
+            </NavLink>
           </li>
         ))}
       </ul>
