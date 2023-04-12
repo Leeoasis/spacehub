@@ -1,10 +1,10 @@
 import React from 'react';
-import MyRockets from '../components/rockets';
+import RocketList from '../components/rocketsDisplay';
 
 export default function Rockets() {
   return (
     <div>
-      <MyRockets />
+      <RocketList />
     </div>
   );
 }

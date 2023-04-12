@@ -1,0 +1,46 @@
+.Rocket-Card {
+  display: flex;
+  gap: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+img {
+  height: 500px;
+  width: 500px;
+}
+
+.Reserved-Text {
+  font-weight: bold;
+  color: red;
+  margin-right: 7px;
+}
+
+.Reserve-Button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.Reserve-Button:hover {
+  background-color: #0069d9;
+}
+
+.Cancel-Reservation {
+  background-color: #ecf2f8;
+  color: #5c5c5c;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.Cancel-Reservation:hover {
+  background-color: #0069d9;
+}
