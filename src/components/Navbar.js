@@ -15,9 +15,9 @@ export default function Navbar() {
         {links.map((link) => (
           <li key={link.text}>
             <NavLink
-              exact
+              exact="true"
               to={link.path}
-              activeClassName="nav-link-active"
+              activeclassname="nav-link-active"
             >
               {link.text}
             </NavLink>

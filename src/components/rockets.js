@@ -1,35 +1,46 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Rocket = ({ rocket, onReserveClick }) => (
+const Rocket = ({ rocket, handleReserveClick, onCancelClick }) => (
+
   <div className="Rocket-Card">
     <div className="Rocket-Images">
       {rocket.flickr_images && rocket.flickr_images.length > 0 && (
-        <img src={rocket.flickr_images[0]} alt={`Rocket ${rocket.rocket_name}`} />
+        <img src={rocket.flickr_images[0]} alt={`Rocket ${rocket.name}`} />
       )}
     </div>
     <div>
-      <h2>{rocket.rocket_name}</h2>
-      <p>
-        <span className="Reserved-Text">{rocket.reserved ? 'Reserved' : 'Not reserved'}</span>
+      <h2>{rocket.name}</h2>
+      <p className="card-text">
+        <span className={rocket.reserved === true ? 'show' : 'hidden'}>Reserved</span>
         {rocket.description}
       </p>
-      <button className="Reserve-Button" type="button" onClick={() => onReserveClick(rocket.id)}>Reserve Rocket</button>
-      <br />
-      <button className="Cancel-Reservation" type="button">Cancel Reservation</button>
+      {rocket.reserved && (
+      <button
+        type="button"
+        className="Cancel-Reservation"
+        onClick={() => onCancelClick(rocket.id)}
+      >
+        Cancel Reservation
+      </button>
+      )}
+      {!rocket.reserved && (
+      <button
+        type="button"
+        className="Reserve-Button"
+        onClick={() => handleReserveClick(rocket.id)}
+      >
+        Reserve Rocket
+      </button>
+      )}
     </div>
   </div>
 );
 
 Rocket.propTypes = {
-  rocket: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    rocket_name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    flickr_images: PropTypes.arrayOf(PropTypes.string),
-    reserved: PropTypes.bool.isRequired,
-  }).isRequired,
-  onReserveClick: PropTypes.func.isRequired,
+  rocket: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  handleReserveClick: PropTypes.func.isRequired,
+  onCancelClick: PropTypes.func.isRequired,
 };
 
 export default Rocket;

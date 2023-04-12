@@ -23,8 +23,15 @@ ul li a {
   text-decoration: none;
 }
 
-.hide {
+.hidden {
   display: none;
+}
+
+.show {
+  display: "";
+  color: aquamarine;
+  padding: 5px;
+  margin-right: 5px;
 }
 
 

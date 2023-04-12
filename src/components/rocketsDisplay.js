@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets, reserveRocket } from '../redux/rocketsSlice';
+import { fetchRockets, reserveRocket, cancelReservation } from '../redux/rocketsSlice';
 import Rocket from './rockets';
 
 const RocketList = () => {
@@ -19,6 +19,10 @@ const RocketList = () => {
     dispatch(reserveRocket(rocketId));
   };
 
+  const onCancelClick = (rocketId) => {
+    dispatch(cancelReservation(rocketId));
+  };
+
   if (status === 'loading') {
     return <div>Loading...</div>;
   } if (status === 'failed') {
@@ -27,7 +31,12 @@ const RocketList = () => {
   return (
     <div>
       {rockets.map((rocket) => (
-        <Rocket key={rocket.id} rocket={rocket} onReserveClick={handleReserveClick} />
+        <Rocket
+          key={rocket.id}
+          rocket={rocket}
+          handleReserveClick={handleReserveClick}
+          onCancelClick={onCancelClick}
+        />
       ))}
     </div>
   );
