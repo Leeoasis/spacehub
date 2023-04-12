@@ -6,12 +6,13 @@ nav {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .nav-links {
   display: flex;
   gap: 2rem;
-  margin-right: 3rem;
 }
 
 .nav-links li {
@@ -20,6 +21,10 @@ nav {
 
 ul li a {
   text-decoration: none;
+}
+
+.hide {
+  display: none;
 }
 
 
