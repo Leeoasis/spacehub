@@ -1,5 +1,6 @@
-import React from 'react';
+import { React, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import planet from '../images/planet.png';
 
 const links = [
   { path: '/', text: 'Rockets' },
@@ -8,16 +9,26 @@ const links = [
 ];
 
 export default function Navbar() {
+  const [active, setActive] = useState('');
+
+  const handleNavLinkClick = (linkText) => {
+    setActive(linkText);
+  };
+
   return (
     <nav>
-      <h1 className="logo">Space Traveler&apos;s Hub</h1>
+      <div className="my-logo">
+        <img className="logo-image" src={planet} alt="logo" />
+        <h1 className="logo">Space Traveler&apos;s Hub</h1>
+      </div>
       <ul className="nav-links">
         {links.map((link) => (
           <li key={link.text}>
             <NavLink
-              exact="true"
+              exact
               to={link.path}
-              activeclassname="nav-link-active"
+              className={active === link.text ? 'active-link' : ''}
+              onClick={() => handleNavLinkClick(link.text)}
             >
               {link.text}
             </NavLink>

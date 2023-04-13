@@ -4,6 +4,7 @@ import Rockets from './routes/Rockets';
 import Profile from './routes/Profile';
 import Missions from './routes/Missions';
 import './styles/App.css';
+import './styles/profile.css';
 import './styles/rockets.css';
 import Navbar from './components/Navbar';
 
