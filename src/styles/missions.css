@@ -30,3 +30,16 @@
   font-weight: bold;
   text-transform: uppercase;
 }
+
+.member {
+  background-color: grey;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 5px;
+  display: flex;
+}
+
+.leave {
+  color: red;
+  border: 1px solid red;
+}
