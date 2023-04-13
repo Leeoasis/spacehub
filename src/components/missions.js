@@ -33,8 +33,8 @@ export default function MyMissions() {
                 <th className="col-2">{mission.mission_name}</th>
                 <td className="col-6">{mission.description}</td>
                 <td className="col-2 text-center pt-5">
-                  {mission.reserved ? (<span className=" active-btn bg-info text-white rounded-1 p-1">Active Member</span>)
-                    : (<span className="bg-secondary text-white rounded-1 p-1">NOT A MEMBER</span>)}
+                  {mission.reserved ? (<span className=" active-btn bg-info text-white rounded-1 p-1 red">Active Member</span>)
+                    : (<span className="member">NOT A MEMBER</span>)}
                 </td>
                 <td className="col-2 text-center pt-5">
                   {!mission.reserved && (
@@ -51,7 +51,7 @@ export default function MyMissions() {
                   <button
                     name="leaveMission"
                     type="submit"
-                    className="btn btn-light border-2 border-danger"
+                    className="btn leave"
                     onClick={() => dispatch(leaveMission(mission))}
                   >
                     Leave Mission

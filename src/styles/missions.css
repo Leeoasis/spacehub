@@ -30,3 +30,18 @@
   font-weight: bold;
   text-transform: uppercase;
 }
+
+.member {
+  background-color: grey;
+  color: #fff;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 3px;
+  border-radius: 5px;
+  display: flex;
+}
+
+.leave {
+  color: red;
+  border: 1px solid red;
+}
