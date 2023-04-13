@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyMissions component should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="container mt -3"
+  >
+    <table
+      class="table table-striped table-bordered table-hover"
+    >
+      <thead>
+        <tr>
+          <th>
+            Mission
+          </th>
+          <th>
+            Description
+          </th>
+          <th>
+            Status
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th
+            class="col-2"
+          >
+            Mission 1
+          </th>
+          <td
+            class="col-6"
+          >
+            Description 1
+          </td>
+          <td
+            class="col-2 text-center pt-5"
+          >
+            <span
+              class=" active-btn bg-info text-white rounded-1 p-1"
+            >
+              Active Member
+            </span>
+          </td>
+          <td
+            class="col-2 text-center pt-5"
+          >
+            <button
+              class="btn btn-light border-2 border-danger"
+              name="leaveMission"
+              type="submit"
+            >
+              Leave Mission
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <th
+            class="col-2"
+          >
+            Mission 2
+          </th>
+          <td
+            class="col-6"
+          >
+            Description 2
+          </td>
+          <td
+            class="col-2 text-center pt-5"
+          >
+            <span
+              class="bg-secondary text-white rounded-1 p-1"
+            >
+              NOT A MEMBER
+            </span>
+          </td>
+          <td
+            class="col-2 text-center pt-5"
+          >
+            <button
+              class="btn btn-light border-2 border-secondary"
+              type="submit"
+            >
+              Join Mission
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</DocumentFragment>
+`;

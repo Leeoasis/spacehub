@@ -6,15 +6,16 @@
   margin-bottom: 2.5rem;
 }
 
-img {
-  height: 500px;
-  width: 500px;
+.Rocket-Heading {
+  margin-top: 2rem;
 }
 
-.Reserved-Text {
-  font-weight: bold;
-  color: red;
-  margin-right: 7px;
+img {
+  width: 300px;
+}
+
+.rocket-text {
+  margin-top: -2rem;
 }
 
 .Reserve-Button {
@@ -44,3 +45,18 @@ img {
 .Cancel-Reservation:hover {
   background-color: #0069d9;
 }
+
+.hidden {
+  display: none;
+}
+
+.show {
+  background-color: blue;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-right: 6px;
+    padding: 5px;
+}
+
+

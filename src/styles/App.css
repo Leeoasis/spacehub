@@ -7,6 +7,18 @@ nav {
   justify-content: space-between;
 }
 
+.my-logo {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-left: 3rem;
+}
+
+.logo-image {
+  height: 40px;
+  width: 40px;
+}
+
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -35,6 +47,18 @@ ul li a {
   background-color: steelblue;
   color: white;
   border-radius: 5px;
+}
+
+.row {
+  display: flex;
+  gap: 30rem;
+  flex-direction: row;
+  margin: 1rem 0;
+  border-top: 1px solid black;
+}
+
+.active-link {
+  text-decoration: underline;
 }
 
 .row {
