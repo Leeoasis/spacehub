@@ -33,8 +33,10 @@
 
 .member {
   background-color: grey;
+  color: #ffffff;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 11px;
+  padding: 3px;
   border-radius: 5px;
   display: flex;
 }
