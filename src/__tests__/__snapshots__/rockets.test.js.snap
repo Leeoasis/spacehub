@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rocket component renders correctly when rocket is not reserved 1`] = `
+<div
+  className="Rocket-Card"
+>
+  <div
+    className="Rocket-Images"
+  >
+    <img
+      alt="Rocket Falcon 1"
+      src="https://www.example.com/falcon1.jpg"
+    />
+  </div>
+  <div>
+    <h2>
+      Falcon 1
+    </h2>
+    <p
+      className="card-text"
+    >
+      <span
+        className="hidden"
+      >
+        Reserved
+      </span>
+      Small launch vehicle
+    </p>
+    <button
+      className="Reserve-Button"
+      onClick={[Function]}
+      type="button"
+    >
+      Reserve Rocket
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Rocket component renders correctly when rocket is reserved 1`] = `
+<div
+  className="Rocket-Card"
+>
+  <div
+    className="Rocket-Images"
+  >
+    <img
+      alt="Rocket Falcon 1"
+      src="https://www.example.com/falcon1.jpg"
+    />
+  </div>
+  <div>
+    <h2>
+      Falcon 1
+    </h2>
+    <p
+      className="card-text"
+    >
+      <span
+        className="show"
+      >
+        Reserved
+      </span>
+      Small launch vehicle
+    </p>
+    <button
+      className="Cancel-Reservation"
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel Reservation
+    </button>
+  </div>
+</div>
+`;
